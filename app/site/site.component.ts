@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { Site } from './site';
+
 @Component({
   moduleId: module.id,
   selector: 'site',
@@ -8,6 +10,9 @@ import { Component, OnInit, Input } from '@angular/core';
   providers: [ ]
 })
 export class SiteComponent implements OnInit {
+
+  @Input()
+  site: Site;
 
   constructor(
   ){}

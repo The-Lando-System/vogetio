@@ -9,8 +9,8 @@
 <div *ngIf="!homeLoading">
   
   <div class="container">
-    <div class="row">
-      <site></site>
+    <div class="row" *ngFor="let site of sites">
+      <site [site]="site" style="width: 100%;"></site>
     </div>
   </div>
 </div>

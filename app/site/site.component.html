@@ -1,10 +1,7 @@
 <div class="card">
-  <div class="card-header">
-    Featured
-  </div>
   <div class="card-block">
-    <h4 class="card-title">Special title treatment</h4>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h4 class="card-title">{{site.name}}</h4>
+    <p class="card-text">{{site.description}}</p>
+    <a [attr.href]="site.url" class="btn btn-primary">Go to {{site.name}}</a>
   </div>
 </div>
