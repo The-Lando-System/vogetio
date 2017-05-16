@@ -5,6 +5,8 @@ button:hover {
 
 
 body {
+  background-image: url('resources/images/background.jpg');
+  background-size: 200%;
   background-color: #fafafa!important;
 }
 
