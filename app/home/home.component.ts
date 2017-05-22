@@ -68,33 +68,20 @@ export class HomeComponent implements OnInit {
   }
 
   private initSites() {
-    let s1 = new Site();
-    s1.name = 'Sarlacc';
-    s1.description = 'Service for managing users';
-    s1.url = 'http://sarlacc.voget.io';
-    s1.image = 'resources/images/sarlacc.png'
-    this.sites.push(s1);
+    this.addSite('Sarlacc','Service for managing users','http://sarlacc.voget.io');
+    this.addSite('Info Manager','Create and organize encrypted notes','http://info-manager.voget.io');
+    this.addSite('Dashboard','Custom widgets for weather, stocks, etc.','http://dashboard.mattvoget.com');
+    this.addSite('The Cantina','Listen to and download music','http://cantina.voget.io');
+    this.addSite('R5-D4','Check your network speed','http://r5d4.voget.io');
+    this.addSite('mattvoget.com','My First Website','http://mattvoget.com');
+  }
 
-    let s2 = new Site();
-    s2.name = 'Info Manager';
-    s2.description = 'Create and organize encrypted notes';
-    s2.url = 'http://info-manager.voget.io';
-    s2.image = 'resources/images/info-manager.png'
-    this.sites.push(s2);
-
-    let s3 = new Site();
-    s3.name = 'R5-D4';
-    s3.description = 'Check your network speed';
-    s3.url = 'http://r5d4.voget.io';
-    s3.image = 'resources/images/r5d4.png'
-    this.sites.push(s3);
-
-    let s4 = new Site();
-    s4.name = 'The Cantina';
-    s4.description = 'Listen and download music';
-    s4.url = 'http://cantina.voget.io';
-    this.sites.push(s4);
-
+  addSite(name:string, desc:string, url:string): void {
+    let site = new Site();
+    site.name = name;
+    site.description = desc;
+    site.url = url;
+    this.sites.push(site);
   }
 
 }
